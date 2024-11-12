@@ -13,20 +13,25 @@
 
 
     <header class="header">
-        <a href="#" class="logo"><img src="5thlogo.png" alt="My Logo"></a>
+        <a href="#" class="logo"><img src="Mylogo.png" alt="My Logo"></a>
 
      
     <nav class="navbar">
             <a href="#">Home</a>
             <a href="#about">About</a>
-            <a href="#">Projects</a> 
             <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </nav> 
 
+         <!-- Hamburger Menu for Mobile -->
+    <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+
     </header>
-
-
 
     <section class="home">
         <div class="home-content">
@@ -53,7 +58,6 @@
 
     <section class="about" id="about">
         <div class="about-img">
-            <img src="neonFrame.png" alt="Neon Frame" class="neon-frame"> <!-- Neon frame image -->
             <img src="myPicture.jpeg" alt="About Me" class="picture2"> <!-- Your picture -->
         </div>
         
@@ -66,76 +70,117 @@
             <br>I'm excited to apply my knowledge and collaborate on projects that 
             <br>make a difference!</p>
 
-            <a href="#" class="btn-box">Hire Me</a>
+            <a href="RESUME.pdf" target="_blank" class="btn-box">Hire Me</a>
         </div>
     </section>
 
     <div class="Services" id="services">
  
         <div class="container">
-            <h2 class="section-title">My Services</h2>
-            <p class="section-subtitle">Service Offered</p>
+            <h2 class="section-title">Services I Offer</h2>
+            <p class="section-subtitle">From Concept To Code</p>
             <div class="service-cards">
                 <div class="service-card">
                     <div class="service-icon">
                         <img src="icon2.png" alt="UI/UX Design Icon">
                     </div>
                     <h3 class="service-title">UI/UX Design</h3>
-                    <p class="service-description">involves creating intuitive and engaging digital experiences that enhance user satisfaction and drive business success. </p>
+                    <p class="service-description">Crafting seamless, intuitive experiences that delight users and fuel business growth.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <img src="icon3.jpg" alt="Web Design Icon">
                     </div>
                     <h3 class="service-title">Web Design</h3>
-                    <p class="service-description"> visually appealing and user-friendly websites that provide an excellent user experience and drive business growth.</p>
+                    <p class="service-description">Designing visually stunning, user-friendly websites that elevate experiences and drive success.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <img src="icon4.jpg" alt="Web Design Icon">
+                        <img src="icon4.jpg" alt="Web Development Icon">
                     </div>
                     <h3 class="service-title">Web Development</h3>
-                    <p class="service-description">building and maintaining websites that are efficient, secure, and scalable</p>
+                    <p class="service-description">Building secure, scalable websites that run smoothly and grow with your business.</p>
                 </div>
             </div>
         </div>
 
     </div>
-   <!-- <div>
-        <form class="my-form">
-            <div class="form-group">
-                <label>Name:</label>
-                <input type="text" name="name">
-            </div>
-            <div class="form-group">
-                <label>Email:</label>
-                <input type="text" name="email">
-            </div>
-            <div class="form-group">
-                <label>Message:</label>
-                <textarea name="message"></textarea>
-            </div>
-            <input class="button" type="Submit" name="submit">
-        </form>
-    </div>-->
 
-    <div class="Contact" id="contact" >
+    <div class="Projects" id="projects">
         <div class="container">
-            <h1 class="title">Contact Us</h1>
-            <p class="sub">Have a project in mind or want to discuss how can I collaborate? <br> I'm here to help bring your ideas to life.</p>
-            <div class="contact-info">
-                <p><strong>Email:</strong> neshlhyn@gmail.com</p>
-                <p><strong>Phone:</strong> +63 9351351065</p>
-                <p><strong>Location:</strong> Baguio City, Philippines</p>
-            </div>
-            <div class="home-sci">
-                <a href="#"><i class='bx bxl-facebook'></i></a>
-                <a href="#"><i class='bx bxl-instagram'></i></a>
-                <a href="#"><i class='bx bxl-whatsapp'></i></a>
-                <a href="#"><i class='bx bxl-tiktok'></i></a>
+            <h2 class="section-title">My Projects</h2>
+            <p class="section-subtitle">Innovation and Creations</p>
+            <div class="project-cards">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="project 1.png" alt="Project 1" onclick="openModal('project 1.png')">
+                    </div>
+                </div>
+    
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="project 2.png" alt="Project 2" onclick="openModal('project 2.png')">
+                    </div>
+                </div>
+    
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="project 3.png" alt="Project 3" onclick="openModal('project 3.png')">
+                    </div>
+                </div>
+    
+    <!-- The Modal -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+    
+                <!-- Adding more projects if meron pa HAHAHAHA -->
             </div>
         </div>
     </div>
+    
+    <div class="Contact" id="contact">
+        <div class="container">
+            <h1 class="title">Contact Us</h1> <!-- Title should be at the top -->
+            <div class="group-1">
+                <p class="sub">Have a project in mind or want to discuss how can I collaborate? I'm here to help bring your ideas to life.</p>
+                <div class="Contact-info">
+                    <p><strong>Email:</strong> neshlhyn@gmail.com</p>
+                    <p><strong>Phone:</strong> +63 9351351065</p>
+                    <p><strong>Location:</strong> Baguio City, Philippines</p>
+                </div>
+                <div class="home-sci">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-whatsapp'></i></a>
+                    <a href="#"><i class='bx bxl-tiktok'></i></a>
+                </div>
+            </div>
+            <div class="group-2">
+                <form class="my-form">
+                    <div class="form-group">
+                        <label>Name:</label>
+                        <input type="text" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label>Email:</label>
+                        <input type="text" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label>Message:</label>
+                        <textarea name="message"></textarea>
+                    </div>
+                    <input class="button" type="submit" name="submit">
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    
 
     <div style="margin-top:50px;"></div>
 

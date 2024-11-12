@@ -5,37 +5,34 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'poppins', sans-serif;
+    font-family: montserrat , Lora, 'poppins', sans-serif;
 }
+
+/* Body styling */
 body {
-        color: #ededed;
-        background-color: #e2f0f9;
-        background-size: cover; 
-        background-position: center;
-        background-attachment: fixed;
-        margin: 0; /* Remove default margin */
-        padding: 0; /* Remove default padding */
-        width: 100%;
-        height: 100vh; /* Ensure it covers the full viewport height */
-        overflow-x: hidden; /* Prevent horizontal overflow */
-    }
-    
+    color: #ededed;
+    background-color: #e2f0f9;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
 
-
+/* Header Styling */
 .header {
     position: fixed;
-    top: 8;
+    top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 10%;
-    background: transparent;
+    padding: 10px 5%; /* Reduced padding for a smaller header */
+    background-color: #b0dde4; /* Light blue background */
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    background-color: #b0dde4;
 }
-
 .logo {
     position: relative;
     font-size: 35px;
@@ -45,91 +42,142 @@ body {
     cursor: default;
     animation: slideRight 1s ease forwards;
 }
-
-.navbar a {
-    display: inline-block;
-    font-size: 25px;
-    color: #286fb4;
-    text-decoration: none;
-    font-weight: 700;
-    margin-left: 35px;
-    transition: .3s;
-    cursor: default;
-    opacity: 0;
-    animation: slideTop 0.5s ease forwards;
-    animation-delay: calc(0.3s * var(--i)); /* Adjusted delay */
+.logo img {
+    height: 50px; /* Reduced logo size */
+    width: auto;
 }
 
-.navbar a:hover { 
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px; /* Smaller gap between navbar links */
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar a {
+    font-size: 16px; /* Smaller font size */
+    color: #286fb4;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 5px 10px; /* Reduced padding */
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.navbar a:hover {
     color: #df4c73;
 }
 
-/*.home {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    display: flex;
+/* Hamburger Menu Styling */
+.hamburger {
+    display: none; /* Hide by default */
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    justify-content: space-between;
     align-items: center;
-    padding: 70px 10% 0;
 }
 
-.home-content {
-    max-width: 600px;
-}*/
+.hamburger .bar {
+    width: 100%;
+    height: 4px;
+    background-color: #286fb4;
+}
 
+/* Mobile Styling */
+@media screen and (max-width: 768px) {
+    .navbar {
+        display: none; /* Hide navbar links by default on small screens */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #b0dde4;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px 10%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar a {
+        font-size: 16px; /* Slightly larger font size for mobile */
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger on small screens */
+    }
+}
+
+/* Navbar visibility when active */
+.navbar.active {
+    display: flex; /* Show navbar links when 'active' class is added */
+}
+
+/* Home Section */
 .home {
     position: relative;
     width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Aligns content to the right */
-    padding: 70px 10%; /* You can adjust this padding as needed */
+    justify-content: flex-end;
+    padding: 70px 10%;
 }
 
+/* Home Content */
 .home-content {
     display: flex;
-    align-items: center; /* Add some margin on the right if needed */
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    max-width: 100%;
+    margin: auto;
+    padding: 0 20px;
 }
 
-
+/* Text Styling */
 .home-content h3 {
-    font-size: 36px;
+    font-size: 28px; /* Adjusted for better readability */
     font-weight: 600;
     color: black;
     animation: slideBottom 1s ease forwards;
-    animation-delay: 0.3s; /* Adjusted delay */
+    animation-delay: 0.3s;
+}
+
+.home-content h1 {
+    font-size: 48px; /* Slightly smaller than before */
+    font-weight: 700;
+    margin: -3px 0;
+    color: #286fb4;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 0.3s;
 }
 
 .home-content h3:nth-of-type(2) {
     margin-bottom: 10px;
     animation: slideTo 1s ease forwards;
-    animation-delay: 0.3s; /* Adjusted delay */
+    animation-delay: 0.3s;
 }
 
 .home-content h3 span {
     color: #df4c73;
-    font-size: 46px;
+    font-size: 44px;
     font-weight: 700;
-}
-
-.home-content h1 {
-    font-size: 56px;
-    font-weight: 700;
-    margin: -3px 0;
-    color: #286fb4;
-    animation: slideLeft 1s ease forwards;
-    animation-delay: 0.3s; /* Adjusted delay */
 }
 
 .home-content p {
-    font-size: 20px;
+    font-size: 18px; /* Adjusted text size */
     color: black;
     opacity: 0;
     animation: slideRight 1s ease forwards;
-    animation-delay: 0.4s; /* Adjusted delay */
+    animation-delay: 0.4s;
 }
 
+/* Social Icons */
 .home-sci a {
     display: inline-flex;
     justify-content: center;
@@ -145,7 +193,7 @@ body {
     transition: .5s ease;
     opacity: 0;
     animation: slideLeft 1s ease forwards;
-    animation-delay: calc(0.3s * var(--i)); /* Adjusted delay */
+    animation-delay: calc(0.3s * var(--i));
     margin: 30px 15px 30px 0;
 }
 
@@ -155,6 +203,7 @@ body {
     box-shadow: 0 0 20px #286fb4;
 }
 
+/* Button Styling */
 .btn-box {
     display: inline-block;
     padding: 12px 28px;
@@ -162,12 +211,13 @@ body {
     border-radius: 40px;
     font-size: 16px;
     color: #081b29;
+    box-shadow: 4px 4px 8px rgb(0, 121, 50);
     letter-spacing: 1px;
     text-decoration: none;
     font-weight: 600;
     opacity: 0;
     animation: slideTop 1s ease forwards;
-    animation-delay: 0.4s; /* Adjusted delay */
+    animation-delay: 0.4s;
 }
 
 .btn-box:hover {
@@ -176,20 +226,19 @@ body {
                 0 0 50px #286fb4;
 }
 
+/* Profile Picture */
 .profile-pic {
-    width: 600px; /* Increase size as needed */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 50%; /* Optional: makes the image circular */
-    margin-right: 300px; /* Space between image and text */
-    margin-left: -900px; /* Move the image to the left */
+    width: 270px; /* Smaller profile picture */
+    height: auto;
+    border-radius: 50%;
+    margin-right: 50px; /* Reduced space between image and text */
 }
 
+/* Text Content Box */
 .text-content {
-    max-width: 600px; /* Control text width */
-    margin-right: 100px;
+    max-width: 500px; /* Smaller text box */
+    margin-left: 90px;
 }
-
-
 
 /*------------------------for about---------------------------*/
 
@@ -198,43 +247,35 @@ body {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 1.5rem;
-    padding-top:10%;
+    padding-top:15%;
     padding-bottom: 20%;
 }
 
-/*.about-img img {
-    padding-bottom: 20%;
-    max-width: 630px;
-    height: auto;
-    width: 100%;
-    border-radius: 8px;
-}*/
 .about-img {
     position: relative; /* For absolute positioning of the profile picture */
     display: flex; /* Use flexbox for alignment */
     justify-content: center; /* Center the frame */
     align-items: center; /* Center vertically */
+    max-width: 100%;
+    margin: auto;
+    padding: 0 20px;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Optional: makes the image circular */
+    margin-right: 300px; /* Space between image and text */
 }
 
-.neon-frame {
-    width: 80%; /* Use a percentage for responsive width */
-    max-width: 500px; /* Set a maximum width */
-    aspect-ratio: 1; /* Maintain a square aspect ratio */
-    border-radius: 12px; /* Rounded corners for the frame */
-    padding: 10px; /* Padding inside the frame */
-    display: flex; /* Use flexbox to center the image inside */
-    justify-content: center; /* Center the image */
-    align-items: center; /* Center the image */
-
-}
 
 .picture2 {
-    width: 70%; /* Make the profile picture 70% of the frame size */
-    max-width: 400px; /* Set a max width to control size */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 50%; /* Optional: make it circular */
-    z-index: 1; /* Ensure the profile pic is on top */
-    position: absolute; /* Ensure it stays within the frame */
+    width: 70%; 
+    height: auto; 
+    z-index: 1;
+    position: absolute; 
+    width: 390px; /*change width 600px to 590px*/
+    height: auto;
+    margin-right: 0; 
+    margin-left: 0;
+    border-radius: 30%;
+    box-shadow: 4px 4px 8px rgb(0, 121, 50);
 }
 
 
@@ -251,7 +292,7 @@ body {
     font-size: 29px;
     font-weight: 600;
     color: #286fb4;
-    line-height: 1.7;
+    line-height: 1;
     margin: 15px 0 20px;
 }
 
@@ -259,14 +300,14 @@ body {
     color: #286fb4;
     font-size: 20px;
     line-height: 1.4;
-    margin-bottom: 1rem; /* Reduced spacing between paragraphs */
-    margin-top: 1rem; /* Reduced spacing from above elements */
-    margin-right: 0; /* Remove right margin to bring closer */
+    margin-bottom: .5rem; /* Reduced spacing between paragraphs */
+    margin-top: .5rem; /* Reduced spacing from above elements */
+    margin-right: 15px; /* Remove right margin to bring closer */
 }
 
 /*------------------------for services---------------------------*/
 
-#services {
+.services {
     scroll-margin-block-start: 70px;
     text-align: center;
     width: 100%;
@@ -281,17 +322,14 @@ body {
     display: flex;
     margin: auto;
     align-items: center;
-    justify-content: space-between;
-   
+    justify-content: space-between;   
 }
 
 ul {
     margin-top: 5px;
     font-size: 25px;
-   
     padding: 3px;
-    border-radius: 8px;
-   
+    border-radius: 8px; 
 }
 
 ul li {
@@ -329,25 +367,24 @@ ul li a:hover::after {
 }
 
 ul li a:hover {
-  
     transition: color 0.5s ease-in-out;
 }
 
 .container {
     max-width: 100%;
     margin: auto;
-    padding: 0 20px;
+    padding-top: 10%;
+    padding-bottom: 20%;
     align-items: center;
 }
 
 .section-title {
-    font-size: 45px; 
-    /*font-family: 'Courier New';*/
+    font-size: 45px;
     font-weight: bolder;
-    letter-spacing: 3px;
-    word-spacing: 5px;
-    margin-bottom: 10px;
-    color:#286fb4; 
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    margin-bottom: 8px;
+    color: #064ac7;
     text-align: center;
     text-transform: uppercase;
     position: relative;
@@ -364,36 +401,36 @@ ul li a:hover {
     
 }
 
+
 .section-subtitle { 
-    font-size: 30px;
+    font-size: px;
     font-weight: bold;
     text-align: center;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     word-spacing: 3px;
-    color: #286fb4;
+    color:#286fb4; 
     margin-bottom: 20px;
 
 }
 
 .service-cards {
-    display: flex;                    /* Use flexbox for layout */
-    justify-content: space-between;   /* Space cards evenly */
+    display: flex;                    
+    justify-content: space-between;                  
     margin-top: 2%;
-    margin-bottom: 20%;
-    width: 100%;                     /* Full width to prevent overflow */
+    margin-bottom: 20%;       
+    width: 100%;      
 }
 
 .service-card {
-    background: #b0dde4;              /* Card background color */
-    padding: 3px; 
+    background: #b0dde4; 
+    padding: 3px;                   
     border-radius: 15px;
-    flex: 0 1 calc(33.333% - 20px);   /* Allow cards to take one-third of the row */
-    max-width: calc(33.333% - 20px);  /* Limit max width to one-third */
+    flex: 0 1 calc(33.333% - 20px); 
+    max-width: calc(33.333% - 20px);  
     text-align: center;
     box-shadow: 0 10px 20px rgba(0, 81, 255, 0.678); 
     transition: transform 0.3s ease, background 0.3s ease; 
 }
-
 
 .service-card:hover {
     background: rgba(0, 119, 255, 0.753);
@@ -421,8 +458,132 @@ ul li a:hover {
     font-size: 18px; 
     color: black; 
     opacity: 0.9; 
-    margin: 30px 10px ;
+    margin: 30px 10px ;   
+    line-height: 1.5;
 }
+
+
+/*------------------------for projects---------------------------*/
+.projects {
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    padding: 80px 5%; /* Add more padding on the left and right */
+    font-family: 'Courier New';
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Gap between the cards */
+    width: 95%; /* Increased width from 90% to 95% */
+    max-width: 100%; /* Set a maximum width for the grid container */
+    margin-left: 15%; /* Center the grid itself */
+    justify-items: center; /* Center the cards horizontally within each grid cell */
+    align-items: center; /* Optional: center the cards vertically within each grid cell */
+}
+
+.project-card {
+    width: 100%; /* Ensure the card takes up 100% of its container */
+    max-width: 300px; /* Set a max-width for each card */
+    min-width: 250px; /* Optionally, set a minimum width to avoid shrinking too small */
+    border-radius: 8px;
+    box-shadow: 4px 4px 8px rgb(0, 121, 50);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically inside the card */
+    align-items: center; /* Center content horizontally inside the card */
+    height: 100%; /* Ensure the card takes up available height */
+}
+
+/* Hover Effect on Project Card */
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 4px 4px 8px rgb(0, 121, 50);
+}
+
+/* Project Image Styles */
+.project-img {
+    display: flex; /* Use flexbox to center the image */
+    justify-content: center; /* Horizontally center the image */
+    align-items: center; /* Vertically center the image */
+    width: 100%; /* Full width of the card */
+    height: 200px; /* Set a fixed height for the image */
+    position: relative;
+    overflow: hidden; /* Hide anything that overflows the container */
+}
+
+/* The image itself */
+.project-img img {
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+    width: 100%; /* Image will take up the full width of the container */
+    height: 100%; /* Image will take up the full height of the container */
+}
+
+/* Project Info Styles */
+.project-info {
+    padding: 20px;
+}
+
+/* Project Title Styles */
+.project-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Project Description Styles */
+.project-description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Black with opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: 10% auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Hover effect on close button */
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 
 /*------------------------for contacts---------------------------*/
 
@@ -434,46 +595,63 @@ ul li a:hover {
     margin-top: auto;
 }
 
-.Contact .container { /*  smallbox */
+.Contact .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;   /* Two equal columns */
+    gap: 40px;                        /* Space between groups */
     max-width: 1200px;
     margin: auto;
-    padding: 20px 20px;
-    margin-top: 5%;
-    margin-bottom: 15%;
-    padding: 40px; 
-    border-radius: 10px; 
-    box-shadow: 0 10px 20px rgba(0, 177, 247, 0.815); 
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 177, 247, 0.815);
+}
+
+.title {
+    grid-column: span 2;  /* Make title span both columns */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.group-1 {
+    display: flex;
+    flex-direction: column;
+    border-right: 5px solid #286fb4;  /* Make the border thicker to be more visible */
+    padding-right: 40px;              /* Add space between content and the border */
+}
+
+.group-2 {
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;  /* Ensure group-2 has some left padding to avoid touching the border */
 }
 
 .Contact .title {
-    font-size: 40px; 
+    font-size: 40px;
     font-weight: bolder;
     margin-bottom: 20px;
     color: #286fb4;
-    text-transform: uppercase; 
-    letter-spacing: 2px; 
-    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .Contact .sub {
-    color: #286fb4; 
-    font-size: 18px; 
+    color: #286fb4;
+    font-size: 18px;
     font-weight: 550;
     margin-bottom: 30px;
-    line-height: 1; 
+    line-height: 1.5;
 }
 
 .Contact-info {
     margin-bottom: 20px;
-    font-size: 20px;
-    font-weight: 400;
-    color: black;
+    color: #286fb4;
+    line-height: 1.5;
 }
 
 .contact-info p {
     margin: 10px 0;
-    line-height: 1.6; 
-    color:#286fb4;
+    line-height: 1.6;
+    color: #286fb4;
     font-weight: 300;
     font-size: 18px;
 }
@@ -484,6 +662,50 @@ ul li a:hover {
     align-items: center;
     margin-top: 20px;
 }
+
+.my-form {
+    max-width: 500px;
+    width: 100%;
+}
+
+.my-form .form-group {
+    padding-bottom: 15px;
+}
+
+.my-form label {
+    display: block;
+    color: #000;
+    font-weight: 400;
+    font-size: larger;
+}
+
+.my-form input[type="text"], .my-form textarea {
+    padding: 8px;
+    width: 100%;
+}
+
+.my-form input[type="submit"] {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #286fb4;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    box-shadow: 4px 4px 8px rgb(0, 121, 50);
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 0.4s; /* Adjusted delay */
+}
+
+.button:hover {
+    box-shadow: 0 0 5px #286fb4,
+                0 0 25px #286fb4,
+                0 0 50px #286fb4;
+}
+
 
 /*------------------------animations---------------------------*/
 
@@ -530,31 +752,26 @@ ul li a:hover {
     }
 }
 
+/*for projects*/
 
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
 
+    .section-subtitle {
+        font-size: 0.9rem;
+    }
 
+    .project-cards {
+        grid-template-columns: 1fr;
+    }
 
+    .project-title {
+        font-size: 1.5rem;
+    }
 
-
-/*.my-form{
-    padding: 20px;
+    .project-description {
+        font-size: 0.9rem;
+    }
 }
-.my-form .form-group {
-    padding-bottom: 15px;
-}
-.my-form label{
-    display:block;
-    color:aliceblue;
-    font-weight: 400;
-    font-size: larger;
-}
-.my-form input[type="text"], .my-form textarea{
-    padding: 8px;
-    width: 100%;
-}
-.my-form input[type="submit"]{
-    background-color: #333;
-    color: aquamarine;
-    padding: 10px 5px;
-    border-radius: 2%;
-} */
