@@ -33,3 +33,34 @@ function closeModal() {
     var modal = document.getElementById("imageModal");
     modal.style.display = "none";
 }
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Progress Bar Animation
+    const progressBars = document.querySelectorAll(".progress");
+
+    progressBars.forEach(bar => {
+        const percentage = bar.getAttribute("data-percentage");
+        bar.style.width = percentage + "%";
+    });
+
+    // Counter Animation
+    const counters = document.querySelectorAll(".counter");
+
+    counters.forEach(counter => {
+        const updateCounter = () => {
+            const target = +counter.getAttribute("data-target");
+            const current = +counter.innerText;
+            const increment = target / 100; // Adjust speed by changing this divisor
+
+            if (current < target) {
+                counter.innerText = Math.ceil(current + increment);
+                setTimeout(updateCounter, 20); // Adjust timing here for smoothness
+            } else {
+                counter.innerText = target; // Make sure the counter ends at the target value
+            }
+        };
+
+        updateCounter();
+    });
+});

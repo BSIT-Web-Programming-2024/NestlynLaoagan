@@ -13,7 +13,7 @@
 
 
     <header class="header">
-        <a href="#" class="logo"><img src="MyLogo.png" alt="My Logo"></a>
+        <a href="#" class="logo"><img src="Mylogo.png" alt="My Logo"></a>
 
      
     <nav class="navbar">
@@ -57,22 +57,75 @@
 
 
     <section class="about" id="about">
-        <div class="about-img">
-            <img src="myPicture.jpeg" alt="About Me" class="picture2"> <!-- Your picture -->
-        </div>
-        
-        <div class="about-text">
-            <h2>About <span> Me </span></h2>
-            <h4>Web Developer!</h4>
-            <p>Hi! I'm a fresh IT graduate passionate about technology 
-            <br>and innovation. With skills in software development and web design,
-            <br>I strive to create user-friendly and impactful digital solutions. 
-            <br>I'm excited to apply my knowledge and collaborate on projects that 
-            <br>make a difference!</p>
-
-            <a href="RESUME.pdf" target="_blank" class="btn-box">Hire Me</a>
+        <div class="about-content">
+            <!-- Left Side: About Me + Image -->
+            <div class="about-left">
+                <div class="about-img">
+                    <img src="myPicture.jpeg" alt="About Me" class="picture2"> <!-- Your picture -->
+                </div>
+                <div class="about-text">
+                    <h2>About <span> Me </span></h2>
+                    <h4>Web Developer!</h4>
+                    <p>Hi! I'm a fresh IT graduate passionate about technology 
+                    <br>and innovation. With skills in software development and
+                    <br>web design, I strive to create user-friendly and impactful 
+                    <br> digital solutions. I'm excited to apply my knowledge and 
+                    <br>collaborate on projects that make a difference!</p>
+    
+                    <a href="RESUME.pdf" target="_blank" class="btn-box">Hire Me</a>
+                </div>
+            </div>
+    
+            <!-- Right Side: Skills & Progress Bars -->
+            <div class="about-right">
+                <div class="skills-section">
+                    <h2>My Skills</h2>
+                    <div class="skill">
+                        <h3>Java</h3>
+                        <div class="progress-bar">
+                            <div class="progress" data-percentage="80">80%</div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <h3>Python</h3>
+                        <div class="progress-bar">
+                            <div class="progress" data-percentage="70">70%</div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <h3>C#</h3>
+                        <div class="progress-bar">
+                            <div class="progress" data-percentage="65">65%</div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <h3>C++</h3>
+                        <div class="progress-bar">
+                            <div class="progress" data-percentage="60">65%</div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Achievements Section -->
+                <div class="counter-section">
+                    <h2>My Achievements</h2>
+                    <div class="counter-item">
+                        <span class="counter" data-target="15">0</span>
+                        <p>Years of Experience</p>
+                    </div>
+                    <div class="counter-item">
+                        <span class="counter" data-target="50">0</span>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="counter-item">
+                        <span class="counter" data-target="25">0</span>
+                        <p>Clients Served</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+    
 
     <div class="Services" id="services">
  
@@ -115,6 +168,7 @@
                 <div class="project-card">
                     <div class="project-img">
                         <img src="project 1.png" alt="Project 1" onclick="openModal('project 1.png')">
+                        <h2 class="TitleProject">Airlines</h2>
                     </div>
                 </div>
     
@@ -122,6 +176,7 @@
                 <div class="project-card">
                     <div class="project-img">
                         <img src="project 2.png" alt="Project 2" onclick="openModal('project 2.png')">
+                        <h2 class="TitleProject">Drive</h2>
                     </div>
                 </div>
     
@@ -129,6 +184,7 @@
                 <div class="project-card">
                     <div class="project-img">
                         <img src="project 3.png" alt="Project 3" onclick="openModal('project 3.png')">
+                        <h2 class="TitleProject">Vital</h2>
                     </div>
                 </div>
     
