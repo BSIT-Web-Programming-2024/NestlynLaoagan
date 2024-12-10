@@ -101,7 +101,7 @@ toggleButton.addEventListener('click', () => {
         logoImage.src = 'MyLogo2.png';  // Change to MyLogo2.png for nude mode
         icon.textContent = '🌰';  // Change to moon icon for Nude mode
     } else {
-        logoImage.src = 'Mylogo.png';  // Revert back to Mylogo.png for light mode
+        logoImage.src = 'MyLogo1.png';  // Revert back to Mylogo.png for light mode
         icon.textContent = '🫐';  // Change to sun icon for Light mode
     }
 });
