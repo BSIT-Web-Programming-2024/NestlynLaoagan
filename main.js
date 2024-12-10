@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     progressBars.forEach(bar => {
         const percentage = bar.getAttribute("data-percentage");
         bar.style.width = percentage + "%";
-    });
+    });  
 
     // Counter Animation
     const counters = document.querySelectorAll(".counter");
@@ -82,30 +82,30 @@ document.querySelectorAll('.service-card').forEach(function(serviceCard) {
     });
 });
 
-// Dark Mode Toggle Button Functionality
-const darkModeToggle = document.getElementById("darkModeToggle");
+// Grab the toggle button, body element, and logo image
+const toggleButton = document.getElementById('toggle-mode');
 const body = document.body;
+const logoImage = document.querySelector('.logo img');  // Get the logo image element
+const icon = document.getElementById('toggle-icon');
 
-// Check if dark mode was previously set
-if (localStorage.getItem("darkMode") === "enabled") {
-    body.classList.add("dark-mode");
-    darkModeToggle.textContent = "🌞"; // Change icon to sun when dark mode is enabled
-}
+// Add event listener to the toggle button
+toggleButton.addEventListener('click', () => {
+    // Toggle between nude-mode and default (light) mode
+    body.classList.toggle('nude-mode');
+    
+    // Change the logo based on the current mode
+    const currentLogo = logoImage.src;  // Get the current logo source
 
-// Event listener for dark mode toggle
-darkModeToggle.addEventListener("click", () => {
-    // Toggle dark mode on the body
-    body.classList.toggle("dark-mode");
-
-    // Change the button icon
-    if (body.classList.contains("dark-mode")) {
-        darkModeToggle.textContent = "🌞"; // Sun icon for dark mode
-        localStorage.setItem("darkMode", "enabled"); // Save dark mode state in local storage
+    // If we're in nude-mode, change to MyLogo2.png, else switch back to Mylogo.png
+    if (body.classList.contains('nude-mode')) {
+        logoImage.src = 'MyLogo2.png';  // Change to MyLogo2.png for nude mode
+        icon.textContent = '🌰';  // Change to moon icon for Nude mode
     } else {
-        darkModeToggle.textContent = "🌙"; // Moon icon for light mode
-        localStorage.setItem("darkMode", "disabled"); // Save light mode state in local storage
+        logoImage.src = 'Mylogo.png';  // Revert back to Mylogo.png for light mode
+        icon.textContent = '🫐';  // Change to sun icon for Light mode
     }
 });
+
 
 // Get all the service cards
 const serviceCards = document.querySelectorAll('.service-card');

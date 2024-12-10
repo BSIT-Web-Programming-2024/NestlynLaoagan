@@ -36,8 +36,9 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 10px 5%; /* Reduced padding for a smaller header */
+    padding: 5px 5%; /* Reduced padding for a smaller header */
     background-color: #9cc6e0; /* Light blue background */
+    margin-bottom: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,7 +63,9 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 20px; /* Smaller gap between navbar links */
+    padding-left: 100px;
+    padding-right: 0;
+    gap: 10px; /* Smaller gap between navbar links */
     transition: all 0.3s ease-in-out;
 }
 
@@ -151,7 +154,7 @@ body {
 }
 
 .home-content h3 span {
-    color: #df4c73;
+    color: #dd214a;
     font-size: 30px;
     font-weight: 600;
 }
@@ -226,82 +229,100 @@ body {
     margin-left: 30px;
 }
 
-body.dark-mode {
-    background: url("blackBg.jpg") repeat;
-    color: #fff; /* White text when dark mode is on */
-}
-
-.navbar.dark-mode {
-    background-color: #02151d;
-    color: #fff; /* White text in navbar */
-}
-
-.service-card.dark-mode {
-    background: color #0e460e;;
-    color: #740d0d; /* White text for service cards */
-}
-
-.service-description.dark-mode {
-    background-color: #0e460e;
-    color: #fff; /* White text for description */
-}
-
-/* Links */
-a {
-    color: #4287eef8; /* Default blue for links */
-}
-
-/* Links in dark mode */
-body.dark-mode a {
-    color: #9ecfff; /* Lighter blue links in dark mode */
-}
-
 /* Button Styling for Dark Mode Toggle */
 button.dark-mode-toggle {
     background-color: #9cc6e0;
     color: #fff;
     border: none;
-    padding: 10px;
+    padding:0;
     border-radius: 50%;
     cursor: pointer;
     font-size: 20px;
 }
-
-button.dark-mode-toggle:focus {
-    outline: none;
+/* Brown/Nude Mode */
+body.nude-mode {
+    background-color: #e4d0b7;  /* Nude background */
+    color: #4b2a23;  /* Darker brown text */
 }
 
-button.dark-mode-toggle:hover {
-    transform: scale(1.05);
+body.nude-mode .navbar , body.nude-mode .header, body.nude-mode .dark-mode-toggle{
+    background-color: #b49c83; /* Brownish Navbar */
+    color: #4b2a23; /* Darker brown text for navbar */
+}
+
+body.nude-mode .service-card, body.nude-mode .project-card, body.nude-mode .Contact .container{
+    background-color: #d4af7f; /* Brownish color for service cards */
+    box-shadow: #4b2a23 0px 5px 10px;
+}
+body.nude-mode .service-description {
+    color: #4b2a23; /* Darker brown text */
+    font-style: bolder;
+}
+
+body.nude-mode .btn-box, body.nude-mode .home-sci a , body.nude-mode .my-form input[type="submit"]{
+    background-color: #b49c83; /* Brownish background for buttons */
+    color: #4b2a23; /* Darker brown text for button */
+    border: #4b2a23 2px solid; 
+    box-shadow:  0 0 5px #ca0000;
+}
+
+body.nude-mode .profile-pic , body.nude-mode .picture2 {
+    border: 3px solid #4b2a23; /* Profile pic border color */
+    box-shadow: 0 0 5px #ca0000;
+}
+
+body.nude-mode a ,body.nude-mode .counter, body.nude-mode .section-subtitle{
+    color: #6a4f47; /* Brownish link color */
+   
+}
+
+body.nude-mode .progress {
+    width: 100%;
+    background-color: #8b6e57;
+    border-radius: 25px;
+    overflow: hidden;
+}
+body.nude-mode .progress-bar {
+    height: 20px;
+    background-color: #f0e0cc;
+    text-align: right;
+    padding-right: 10px;
+    line-height: 20px;
+    color: white;
+    border-radius: 25px 0 0 25px;
+}
+
+/* Optional: Change the progress bar background color as well */
+body.nude-mode .progress-bar {
+    background-color: #e6d7b9; /* Light brown background for the progress bar */
+}
+
+
+body.nude-mode a:hover {
+    color: #b40202; /* Lighter brown on hover */
 }
 
 /* Optional: Smooth Transitions */
-body, .navbar, .service-card, .service-description, a {
+body, .navbar, .service-card, .service-description, a , p{
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-body.dark-mode h1 {
-    color:#ff5353;
+body.nude-mode h1, body.nude-mode h3, body.nude-mode h2,
+body.nude-mode .title, body.nude-mode .sub, body.nude-mode .Contact-info,
+body.nude-mode .form-group, body.nude-mode .form-group label{
+    color: #4b2a23; /* Darker brown for headers */
+}
+body.nude-mode .home-content h3 span, body.nude-mode .about-content h2 span{
+    color: #ca0000;
 }
 
-body.dark-mode span {
-    color: #21bbb3;
-    
-}
-body.dark-mode h2, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6 {
-    color: #62fcf4;  /* Dark Blue text color in dark mode */
+body.nude-mode .btn-box, body.nude-mode .button{
+    background-color: #d4af7f;
+    color: #4b2a23;
 }
 
-body.dark-mode h3, body.dark-mode p {
-    color: #f8f8f8;
-}
-
-body.dark-mode a {
-    color:rgb(39, 241, 255)
-
-}
-body.dark-mode .btn-box{
-    color:#f8f8f8;
+body.nude-mode .btn-box:hover , body.nude-mode .my-form input[type="submit"]:hover{
+    box-shadow: 0 0 5px #ad6506da, 0 0 25px #ca0000;
 }
 
 /*------------------------for about---------------------------*/
@@ -357,11 +378,11 @@ body.dark-mode .btn-box{
 
 .about-text h2 {
     font-size: 50px;
-    color: #064ac7;
+    color: rgba(0, 54, 63, 0.801);
 }
 
 .about-text h2 span {
-    color: #df4c73;
+    color: #dd214a;
 }
 
 .about-text p {
@@ -388,7 +409,7 @@ body.dark-mode .btn-box{
 
 .skills-section h2 {
     font-size: 2em;
-    color: #064ac7;
+    color:rgba(0, 54, 63, 0.801);
     margin-bottom: 30px;
     text-align: center;
 }
@@ -402,8 +423,8 @@ h3 {
     color: #333;
 }
 .counter-section h2 {
-    font-size: 50px;
-    color: #064ac7;
+    font-size: 30px;
+    color: rgba(0, 54, 63, 0.801);
 }
 .progress-bar {
     width: 100%;
@@ -497,7 +518,6 @@ h3 {
 }
 
 /* Section Titles */
-.section-title,
 .section-subtitle {
     font-weight: bolder;
     letter-spacing: 2px;
@@ -507,6 +527,17 @@ h3 {
     text-align: center;
     text-transform: uppercase;
     color: #286fb4;
+}
+
+.section-title{
+    font-weight: bolder;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    line-height: 1.8rem;
+    margin-top: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgba(0, 54, 63, 0.801);
 }
 
 .section-title {
@@ -535,11 +566,11 @@ h3 {
 
 /* Individual Service Card */
 .service-card {
-    background: #09bfc5;
+    background: #a6cfe9;
     padding: 20px;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0 10px 20px rgba(0, 81, 255, 0.678);
+    box-shadow: 0 0 15px rgba(0, 81, 255, 0.678);
     position: relative;
     overflow: hidden;
     height: 190px;
@@ -644,7 +675,7 @@ h3 {
 .project-card {
     width: 80%;
     border-radius: 8px;
-    box-shadow: 4px 4px 8px rgb(0, 121, 50);
+    box-shadow: 0 0 20px rgba(0, 81, 255, 0.678);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
@@ -737,15 +768,17 @@ h3 {
 }
 
 .Contact .container {
+    align-items: center;
     display: grid;
     grid-template-columns: 1fr 1fr;  /* Two equal columns */
-    gap: 40px;  /* Space between groups */
-    max-width: 1200px;
+    gap: 10px;  /* Space between groups */
+    max-width: 900px;
     margin-top: 100px;
     padding: 40px;
-    border-radius: 10px;
+    border-radius: 30px;
+    background-color: #a6cfe9;
     box-shadow: 0 10px 20px rgba(0, 177, 247, 0.815);
-    margin-bottom: 50px;  /* Make sure there's space under the container */
+    margin-bottom: 90px;  /* Make sure there's space under the container */
 }
 
 .title {
@@ -757,21 +790,18 @@ h3 {
 .group-1 {
     display: flex;
     flex-direction: column;
-    border-right: 5px solid #286fb4;  /* Make the border thicker to be more visible */
-    padding-right: 40px;  /* Add space between content and the border */
 }
 
 .group-2 {
     display: flex;
     flex-direction: column;
-    padding-left: 40px;  /* Ensure group-2 has some left padding */
 }
 
 .Contact .title {
     font-size: 40px;
     font-weight: bolder;
     margin-bottom: 20px;
-    color: #286fb4;
+    color: rgba(0, 54, 63, 0.801);
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -816,14 +846,17 @@ h3 {
 
 .my-form label {
     display: block;
-    color: #000;
-    font-weight: 400;
-    font-size: larger;
+    color:#286fb4;
+    font-weight:bold;
+    font-size: 17px;
 }
 
 .my-form textarea {
     width: 100%;
     height: 50px;
+    padding:10px;
+    border-radius: 10px;
+    border: none;
 }
 
 .my-form input[type="text"],
@@ -831,6 +864,9 @@ h3 {
     width: 100%;
     height: 30px;
     margin-bottom: 0%;
+    padding:10px;
+    border-radius: 10px;
+    border: none;
 }
 
 .my-form input[type="submit"] {
@@ -838,6 +874,8 @@ h3 {
     padding: 12px 28px;
     background: #286fb4;
     border-radius: 40px;
+    border: none;
+    box-shadow: 4px 4px 8px rgb(0, 121, 50);
     font-size: 16px;
     letter-spacing: 1px;
     text-decoration: none;
@@ -845,11 +883,12 @@ h3 {
     opacity: 0;
     animation: slideTop 1s ease forwards;
     animation-delay: 0.4s; /* Adjusted delay */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
 }
 
-.button:hover {
-    box-shadow: 0 0 5px #286fb4,
-                0 0 25px #286fb4,
+.my-form input[type="submit"]:hover {
+    box-shadow: 0 0 5px #286fb4, 
+                0 0 25px #286fb4
 }
 
 /*------------------------animations---------------------------*/

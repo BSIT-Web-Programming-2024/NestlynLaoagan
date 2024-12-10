@@ -31,9 +31,9 @@
         <a href="#contact">Contact</a>
     </nav> 
 
-        <button id="darkModeToggle" class="dark-mode-toggle">
-            🌙 <!-- Moon Icon (could change to sun 🌞 when toggled) -->
-        </button>
+    <button class="dark-mode-toggle" id="toggle-mode">
+        <span id="toggle-icon">🫐</span> <!-- Icon change (Optional) -->
+    </button>
     </header>
 
     <section class="home" id="home" >
@@ -83,26 +83,26 @@
                     <h2>My Skills</h2>
                     <div class="skill">
                         <h3>Java</h3>
-                        <div class="progress-bar">
+                        <div class="progress-bar" id="Bprogress" >
                             <div class="progress" data-percentage="80">80%</div>
                         </div>
                     </div>
                     <div class="skill">
                         <h3>Python</h3>
-                        <div class="progress-bar">
-                            <div class="progress" data-percentage="70">70%</div>
+                        <div class="progress-bar" id="Bprogress" >
+                            <div class="progress"  data-percentage="70">70%</div>
                         </div>
                     </div>
                     <div class="skill">
                         <h3>C#</h3>
-                        <div class="progress-bar">
+                        <div class="progress-bar" id="Bprogress" >
                             <div class="progress" data-percentage="65">65%</div>
                         </div>
                     </div>
                     <div class="skill">
                         <h3>C++</h3>
-                        <div class="progress-bar">
-                            <div class="progress" data-percentage="60">65%</div>
+                        <div class="progress-bar" id="Bprogress" >
+                            <div class="progress" data-percentage="60">60%</div>
                         </div>
                     </div>
                 </div>
@@ -111,15 +111,15 @@
                 <div class="counter-section">
                     <h2>My Achievements</h2>
                     <div class="counter-item">
-                        <span class="counter" data-target="15">0</span>
+                        <span class="counter" id="counter" data-target="15">0</span>
                         <p>Years of Experience</p>
                     </div>
                     <div class="counter-item">
-                        <span class="counter" data-target="50">0</span>
+                        <span class="counter" id="counter" data-target="50">0</span>
                         <p>Projects Completed</p>
                     </div>
                     <div class="counter-item">
-                        <span class="counter" data-target="25">0</span>
+                        <span class="counter" id="counter" data-target="25">0</span>
                         <p>Clients Served</p>
                     </div>
                 </div>
@@ -224,9 +224,10 @@
     
     <div class="Contact" id="contact">
         <div class="container">
-            <h1 class="title">Contact Us</h1>
+            <h2 class="title">Contact Us</h2>
             <div class="group-1">
-                <p class="sub">Have a project in mind or want to discuss how can I collaborate? I'm here to help bring your ideas to life.</p>
+                <p class="sub">Got a project in mind?<br>
+                I'm here to help make it happen!</p>
                 <div class="Contact-info">
                     <p><strong>Email:</strong> neshlhyn@gmail.com</p>
                     <p><strong>Phone:</strong> +63 9351351065</p>
@@ -243,15 +244,15 @@
             <div class="group-2">
                 <form action="connect.php" method="post" class="my-form">
                     <div class="form-group">
-                        <label for="name">Name:</label>
+                        <label for="name">Name</label>
                         <input type="text" id="name" name="name" required placeholder="Enter your full name">
                     </div>
                     <div class="form-group">
-                        <label for="email">Email:</label>
+                        <label for="email">Email</label>
                         <input type="email" id="email" name="email" required placeholder=" Enter your email">
                     </div>
                     <div class="form-group">
-                        <label for="message">Message:</label>
+                        <label for="message">Message</label>
                         <textarea id="message" name="message" required placeholder="Your message here"></textarea>
                     </div>
                     <input class="button" type="submit" name="submit" value="Send Message">
